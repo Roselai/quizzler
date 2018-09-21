@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
     
     //Place your instance variables here
@@ -80,10 +81,10 @@ class ViewController: UIViewController {
         let correctAnswer = allQuestions.list[questionNumber].answer
         
         if correctAnswer == pickedAnswer {
-            print("You are right")
+    ProgressHUD.showSuccess("Correct")
             score += 1
         } else {
-            print("Wrong")
+            ProgressHUD.showError("Wrong!")
         }
         
     }
